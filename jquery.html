@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>animation in jquery</title>
+</head>
+<script src="jquery.js"></script>
+<script>
+	$(document).ready(function(){
+				$("#menu ul li").hover(function(){
+						$(this).find("ul").slideToggle(600);
+					});
+		});
+</script>
+<body>
+	<div id="menu">
+    	<ul>
+        	<li><a href="#">HOME</a></li>
+            <li><a href="#">PRODUCT</a>
+            	<ul>
+                	<li><a href="#">product 1</a></li>
+                    <li><a href="#">product 2</a></li>
+                    <li><a href="#">product 3</a></li>
+                    <li><a href="#">product 4</a></li>
+                    <li><a href="#">product 5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">GALLERY</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
+    <div id="slider">asd</div>
+</body>
+</html>
+
+<style>
+#menu {
+		border:solid 1px  #000;
+		width:1050px;
+		height:40px;	
+		position:fixed;
+		left:100;
+		margin:0  auto;
+			
+	}
+	
+	#menu ul{
+			padding:0px;
+			margin:0px;
+		}
+		
+		#slider{
+					border:solid 1px #000;
+					background:#0FC;
+					height:1500px;
+					float:left;
+					width:980px;
+					margin-left:120px;
+					margin-top:70px;
+			}
+		
+		#menu ul li {
+				border:solid 1px #000;
+				display:inline;
+				float:left;
+				line-height:30px;
+				width:200px;
+				text-align:center;
+			}
+			
+			#menu ul li a{
+					color:#000;	
+					float:left;
+					width:200px;
+					font-family:Arial, Helvetica, sans-serif;
+					text-decoration:none;
+				}
+				
+				#menu ul li ul{
+						display:none;
+					}
+				
+				#menu ul li a:hover{
+						width:200px;
+						text-decoration:underline;
+						background:-webkit-linear-gradient( left , #09F, #FFF , #FFF, #FFF, #FFF, #09F);
+					}
+</style>
